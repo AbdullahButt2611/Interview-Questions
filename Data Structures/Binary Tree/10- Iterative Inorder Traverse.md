@@ -27,9 +27,9 @@ def inorder_iterative(root):
           # Current node is None, meaning that it's time to print the nodes in the "L"
           # sub-tree
           # So, printing and popping the top-most element of the stack
-          result += str(stk[-1].data) + ", "
-          curr_node = stk[-1].right
-          stk.pop()
+          node = stk.pop()
+          result += str(node.data) + ", "
+          curr_node = node.right
 
       # Truncating right most comma
       result_ = result[:-2]

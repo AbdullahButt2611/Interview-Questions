@@ -22,7 +22,7 @@ def binary_search_rotated(nums, target):
         return -1
     
     while low <= high:
-        mid = low + (high - low)
+        mid = low + (high - low) // 2
 
         if nums[mid] == target : return mid
 

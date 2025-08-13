@@ -38,6 +38,10 @@ What is it and why use it?
 
 --
 
-Next Question
+.call() vs .apply()
+Explain the difference.
 
 --
+
+CORS (Cross-Origin Resource Sharing)
+What does it stand for and what issue does it resolve?

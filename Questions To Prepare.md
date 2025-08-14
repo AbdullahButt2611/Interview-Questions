@@ -45,3 +45,18 @@ Explain the difference.
 
 CORS (Cross-Origin Resource Sharing)
 What does it stand for and what issue does it resolve?
+
+--
+
+IIFE (Immediately Invoked Function Expression)
+Why doesn’t function foo(){ }(); work? How to fix it?
+
+--
+
+Global Scope Considerations
+Why is it best to avoid polluting global scope?
+
+--
+
+Closures
+What are they and how/why would you use one?

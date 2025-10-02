@@ -1,4 +1,4 @@
-# 4th Max Salary?  
+# 4th Max Salary?
 
 Finding the 4th maximum salary typically involves ordering the salaries in descending order and then selecting the 4th row.
 

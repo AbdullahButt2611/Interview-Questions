@@ -14,13 +14,12 @@ target = 3
 ## Solution
 ```python
 def binary_search_rotated(nums, target):
-    #TODO: Write - Your - Code
     low = 0
     high = len(nums) - 1
 
     if low > high:
         return -1
-    
+
     while low <= high:
         mid = low + (high - low) // 2
 

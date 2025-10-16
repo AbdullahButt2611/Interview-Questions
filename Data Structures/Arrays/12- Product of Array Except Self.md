@@ -10,7 +10,7 @@ The product of any prefix or suffix of `nums` is guaranteed to fit in a **32-bit
 You must write an algorithm that runs in **O(n)** time and **without using the division operation**.
 
 
-### 💡 Example
+### Example
 
 **Input:**
 `nums = [1, 2, 3, 4]`

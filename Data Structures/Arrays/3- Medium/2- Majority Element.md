@@ -1,7 +1,8 @@
 # 169. Majority Element
 
 `Amazon` • `Google` • `Apple` • `Meta` • `Microsoft` • `Adobe` • `Uber` • `LinkedIn`
-<br>
+
+**Topic:** Moore Voting Algorithm
 
 ## Problem Statement
 

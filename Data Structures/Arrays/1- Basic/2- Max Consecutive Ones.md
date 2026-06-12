@@ -1,4 +1,4 @@
-# 485. Max Consecutive Ones
+# Max Consecutive Ones
 
 `Microsoft` • `Meta` • `Amazon` • `Accenture` • `Yandex`
 <br>

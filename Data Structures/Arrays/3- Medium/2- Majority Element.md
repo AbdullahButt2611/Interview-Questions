@@ -1,4 +1,4 @@
-# 169. Majority Element
+# Majority Element
 
 `Amazon` • `Google` • `Apple` • `Meta` • `Microsoft` • `Adobe` • `Uber` • `LinkedIn`
 

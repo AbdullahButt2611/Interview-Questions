@@ -1,4 +1,4 @@
-# 136. Single Number
+# Single Number
 
 `Amazon` • `Google` • `Microsoft` • `Facebook` • `Bloomberg` • `Adobe`
 <br>

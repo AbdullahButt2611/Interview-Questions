@@ -1,15 +1,44 @@
 <h1 align='center'>Interview Questions 🚀</h1>
+
+<p align='center'>
+  A curated collection of interview questions and solutions across software engineering, data science, and more.
+</p>
+
+<br>
+
+## 👋 Welcome
+
+Questions and detailed solutions organized by topic, covering:
+
+- **Algorithms & Data Structures**
+- **Dynamic Programming**
+- **System Design**
+- **Machine Learning**
+- **And much more...**
+
+Whether you're a seasoned professional or preparing for your first technical interview, this repository is built to help you practice effectively and build confidence.
+
 <br><br>
-Welcome to our comprehensive GitHub repository dedicated to aiding aspiring candidates in their interview preparations. This repository is meticulously curated to provide a diverse collection of questions and solutions, neatly organized into categories corresponding to their respective domains. Whether you're aiming for a software engineering role, data science position, or any other field, this repository is designed to equip you with the knowledge and skills needed to excel in your interviews.
-Inside this repository, you'll find a wealth of interview questions covering various topics such as algorithms, data structures, system design, machine learning, and more. Each question is accompanied by a detailed solution, ensuring that you not only grasp the problem but also understand the most effective ways to solve it.
+
+## Good to Know
+
+Quick tips to help you prepare smarter as you work through the repository.
+
+**Dynamic Programming (Stocks Problems)** \
+There are **6 classic Stock problems** in DP. Nail these 6 first and the rest become much easier to approach. Prioritize them before moving on.
+
 <br><br>
-Our goal is to empower you with the resources necessary to navigate the challenging landscape of technical interviews. By leveraging this repository, you can enhance your problem-solving abilities, strengthen your conceptual understanding, and boost your confidence when facing technical assessments.
-Whether you're a seasoned professional looking to brush up on your skills or a job seeker preparing for your first technical interview, we invite you to explore this repository and make the most of its valuable content. Dive into the categories that align with your target role, challenge yourself with diverse problems, and embark on a journey of continuous improvement as you prepare to shine in your upcoming interviews. Best of luck on your interview preparation journey!<br><br>
 
-
-
-### Complexities Cheat Sheet
-
+## Complexities Cheat Sheet
 
 <img align='center' src='Pseudo Codes for Revision/Sorting Algorithms/Complexities Cheat Sheet.jpeg' />
- 
+
+<br><br>
+
+## 🤝 Contributing
+
+Found a bug or a better solution? Pull requests and issues are always welcome!
+
+<br><br>
+
+<p align='center'>Made with ❤️ for the developer community</p>

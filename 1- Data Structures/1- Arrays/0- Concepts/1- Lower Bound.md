@@ -2,8 +2,6 @@
 
 `Amazon` • `Google` • `Microsoft` • `Adobe` • `Apple` • `Bloomberg` • `Meta` • `Uber` • `LinkedIn` • `TCS`
 
-<br>
-
 ## Question
 
 What is the **lower bound** of an element in a sorted array, and how do you find it efficiently?

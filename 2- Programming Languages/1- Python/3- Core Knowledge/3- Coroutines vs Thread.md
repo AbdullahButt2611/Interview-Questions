@@ -77,7 +77,7 @@ Coroutines are cheap because there is no OS worker behind them. A coroutine is j
 
 Same span of time, three different models. `W` is doing work, `.` is sitting idle and waiting.
 
-![Timeline comparison of blocking code, threads, and coroutines](../../../images/Python/7_1_3_3.svg)
+![Timeline comparison of blocking code, threads, and coroutines](../../../images/Python/2_1_3_3.svg)
 
 The coroutine row is the whole idea: the waiting gaps of one task get filled with the work of another task, without creating a single extra OS worker.
 

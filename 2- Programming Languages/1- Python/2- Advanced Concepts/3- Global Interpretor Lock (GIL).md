@@ -42,7 +42,7 @@ The rule it enforces is one sentence:
 
 **Mental model**: a meeting room with 8 chairs but only **one microphone**. Eight people are present, but only whoever holds the mic may speak. Everyone else sits and waits. Buying more chairs (more cores) does not let more people speak.
 
-![The Python GIL as a single key shared by four threads](../../../images/Python/7_1_2_3.svg)
+![The Python GIL as a single key shared by four threads](../../../images/Python/2_1_2_3.svg)
 
 Three of your four cores do nothing, and you paid for all four.
 

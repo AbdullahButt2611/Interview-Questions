@@ -70,30 +70,28 @@ Read the last row like this: before `7` sits at index `3`, exactly `3` positive 
 
 **Idea in plain words**
 
-- Walk through the array from left to right, one index at a time.
-- At each index compute `missing = arr[i] - (i + 1)`.
-- If `missing < k`, the answer is still ahead of us, so we save a guess and keep moving.
-- The guess is easy: we still need `k - missing` more missing numbers after `arr[i]`, and the numbers right after `arr[i]` are all fresh candidates, so the guess is `arr[i] + (k - missing)`.
-- The moment `missing >= k`, we have gone **too far**. The guess we saved at the previous index is already the correct answer, so we stop.
-- If the loop never crosses `k`, the guess built from the last element is the answer (the case where the missing number lies beyond the array).
-- We start `ans = k`, which covers the case where we overshoot at index `0` itself (then `1, 2, 3, ...` are all missing, so the kth missing is just `k`).
+- `k` doesn't just sit there as the target, it turns into a moving counter as we walk through `arr`.
+- Think of `k` as "the next candidate missing number so far."
+- If the current `arr[i]` is less than or equal to `k`, that value is not missing, it's occupying a slot that would otherwise count toward our sequence of missing numbers. So we bump `k` up by one to make room for it and move on.
+- If `arr[i]` ever jumps past the current `k`, it means every number up to `k` has already been accounted for (it was either missing, or it got pushed aside by an earlier `arr` value), so `k` itself is the answer, return it right away.
+- The special case `k < arr[0]` covers the situation where the very first array element is already bigger than `k`, meaning nothing in `arr` interferes and the answer is simply `k`. (This is technically also caught inside the loop, it's just an early exit.)
+- If the loop finishes without returning, every element in `arr` was small enough to keep shifting `k`, so the final, fully shifted value of `k` is the answer.
 
 **Code**
 
 ```python
 class Solution:
     def findKthPositive(self, arr: List[int], k: int) -> int:
-        ans = k
+        if k < arr[0]:
+            return k
 
-        for i in range(len(arr)):
-            missing = arr[i] - (i + 1)
-
-            if missing < k:
-                ans = arr[i] + (k - missing)
+        for num in arr:
+            if num > k:
+                return k
             else:
-                break
+                k += 1
 
-        return ans
+        return k
 ```
 
 **Dry Run** (`arr = [2, 3, 4, 7, 11]`, `k = 5`)
@@ -101,58 +99,45 @@ class Solution:
 ```ini
 arr = [2, 3, 4, 7, 11]
 k   = 5
-ans = 5                       (default guess)
+
+Check   : k < arr[0]  ->  5 < 2  ->  False, so we enter the loop
 
 Iteration 1
-  i         = 0
-  arr[0]    = 2
-  should be = 0 + 1 = 1
-  missing   = 2 - 1 = 1
-  1 < 5     -> answer is still ahead, save a guess
-  still need= 5 - 1 = 4 more missing numbers
-  ans       = 2 + 4 = 6
+  num = 2
+  is num > k     ->  2 > 5  ->  False
+  2 is not missing, it takes up a slot, shift k forward
+  k = 5 + 1 = 6
 
 Iteration 2
-  i         = 1
-  arr[1]    = 3
-  should be = 1 + 1 = 2
-  missing   = 3 - 2 = 1
-  1 < 5     -> answer is still ahead, save a guess
-  still need= 5 - 1 = 4 more missing numbers
-  ans       = 3 + 4 = 7
+  num = 3
+  is num > k     ->  3 > 6  ->  False
+  shift k forward
+  k = 6 + 1 = 7
 
 Iteration 3
-  i         = 2
-  arr[2]    = 4
-  should be = 2 + 1 = 3
-  missing   = 4 - 3 = 1
-  1 < 5     -> answer is still ahead, save a guess
-  still need= 5 - 1 = 4 more missing numbers
-  ans       = 4 + 4 = 8
+  num = 4
+  is num > k     ->  4 > 7  ->  False
+  shift k forward
+  k = 7 + 1 = 8
 
 Iteration 4
-  i         = 3
-  arr[3]    = 7
-  should be = 3 + 1 = 4
-  missing   = 7 - 4 = 3
-  3 < 5     -> answer is still ahead, save a guess
-  still need= 5 - 3 = 2 more missing numbers
-  ans       = 7 + 2 = 9
+  num = 7
+  is num > k     ->  7 > 8  ->  False
+  shift k forward
+  k = 8 + 1 = 9
 
 Iteration 5
-  i         = 4
-  arr[4]    = 11
-  should be = 4 + 1 = 5
-  missing   = 11 - 5 = 6
-  6 >= 5    -> we have gone past the answer, stop
-  break
+  num = 11
+  is num > k     ->  11 > 9  ->  True
+  11 has jumped past k, everything up to k is now accounted for
+  return k = 9
 
-Return ans = 9
+Return 9
 ```
 
 **Complexity**
 
-- Time: `O(n)` because we may touch every element once.
+- Time: `O(n)` because in the worst case we scan every element once.
 - Space: `O(1)`.
 
 <br><br>

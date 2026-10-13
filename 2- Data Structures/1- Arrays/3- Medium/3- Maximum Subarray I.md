@@ -1,6 +1,6 @@
 # Maximum Subarray I
 
-`Google` • `Amazon` • `Microsoft` • `Apple` • `Meta` • `LinkedIn` • `Uber` • `Bloomberg` • `Goldman Sachs` • `Tesla`
+`Google` • `Amazon` • `Microsoft` • `Apple` • `Meta` • `LinkedIn` • `Uber` • `Bloomberg` • `Goldman Sachs` • `Tesla` • `Apna College`
 
 **Topic:** Kadane's Algorithm
 

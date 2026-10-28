@@ -114,7 +114,7 @@ class Solution:
             else:
                 students += 1
                 pageCount = num
-        
+
         return students
 
 
@@ -130,14 +130,14 @@ class Solution:
             mid = (low + high) // 2
             students = self.findStudentsAllocated(nums, mid)
 
-            if students == m: 
+            if students == m:
                 ans = mid
 
             if students > m:
                 low = mid + 1
             else:
                 high = mid - 1
-        
+
         return ans
 ```
 

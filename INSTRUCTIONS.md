@@ -34,7 +34,7 @@ Process to follow every time:
 - Use bullets where possible and give space accurately. Don't go for long paragraphs which makes it difficult to read.
 
 5. Required Closing Section
-   Always include a "Related Problems" section (for coding questions) or a "Related Questions" section (for conceptual questions) at the end of the file.
+   Always include a "Related Problems" section (for coding questions) or an "Other Ways to Ask This Question" section (for conceptual questions, listing different phrasings of the same question) at the end of the file.
 
 6. Final Quality Check
    Before presenting the finished file, always check the full output for em dashes and triple dashes, and replace them with commas, parentheses, or separate sentences.
@@ -79,6 +79,6 @@ Example Structure (Conceptual):
 
 <br><br>
 
-## Related Questions
+## Other Ways to Ask This Question
 
 [...]

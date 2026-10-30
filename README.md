@@ -31,7 +31,7 @@ There are **6 classic Stock problems** in DP. Nail these 6 first and the rest be
 
 ## Complexities Cheat Sheet
 
-<img align='center' src='Pseudo Codes for Revision/Sorting Algorithms/Complexities Cheat Sheet.jpeg' />
+<img align='center' src='Complexities Cheat Sheet.jpeg' />
 
 <br><br>
 

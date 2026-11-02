@@ -16,12 +16,24 @@ What is Redis? Why is it fast?
 - Stores data as **key-value pairs** in **RAM**.
 - Values are rich data structures, not just strings: String, List, Hash, Set, Sorted Set, Stream, and more.
 - Can **persist** to disk (RDB snapshots, AOF log) so data survives restarts.
-- Common uses:
-  - Caching
-  - Sessions
-  - Rate limiting
-  - Queues and Pub/Sub
-  - Leaderboards (Sorted Sets)
+
+<br><br>
+
+### Use Cases
+
+| Use case            | Why Redis fits                                          | Redis feature                    |
+| :------------------ | :------------------------------------------------------ | :------------------------------- |
+| Caching             | Query results, page fragments, API responses from RAM   | String + TTL                     |
+| Session management  | Fast read/write on every request, auto-expire on logout | Hash or String + TTL             |
+| Real-time analytics | Very high write rate for counters and events            | `INCR`, HyperLogLog, Streams     |
+| Leaderboards        | Always-sorted scores, top-N in one call                 | Sorted Set (`ZADD`, `ZREVRANGE`) |
+| Counting            | Atomic increments, no race conditions                   | `INCR`, `HINCRBY`                |
+| Rate limiting       | Shared counter across all app instances                 | `INCR` + `EXPIRE`, Sorted Set    |
+| Message queuing     | Lightweight broker between services                     | Pub/Sub, Lists, **Streams**      |
+
+- **Pub/Sub** is fire-and-forget: offline subscribers miss messages. For reliable queues use **Streams** (see Pub/Sub vs Streams vs Lists).
+- **Analytics:** one instance handles **100,000+ ops/sec**. Millions per second needs pipelining or a cluster.
+- Not a fit: data larger than RAM, complex queries and joins, or data that must never lose a write.
 
 <br><br>
 
@@ -86,6 +98,8 @@ SSD access   ~ 100 microseconds   (about 1000x slower)
 - Redis is single-threaded. How can it be so fast?
 - What makes Redis faster than a traditional database like MySQL or MongoDB?
 - What is Redis and where would you use it?
+- What are the common use cases of Redis?
+- Why is Redis a good fit for sessions and leaderboards?
 - How does Redis handle thousands of clients with one thread?
 - Why should you avoid the `KEYS` command in production?
 - What are the limitations of an in-memory database?
